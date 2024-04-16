@@ -2,7 +2,6 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { cn } from "@/lib/utils";
-import WaterWaveWrapper from "@/components/visualEffects/water-wave-wrapper";
 import Card from "@/components/ui/card";
 import Button from "@/components/ui/button";
 import { IoMdHome } from "react-icons/io";
@@ -18,6 +17,14 @@ import LandingSection from "@/sections/landing";
 import FeaturedSection from "@/sections/featured";
 import AboutSection from "@/sections/about";
 import ContactSection from "@/sections/contact";
+import dynamic from "next/dynamic";
+
+// Dynamic import WaterWaveWrapper to ensure it's only used in the client-side environment
+
+const WaterWaveWrapper = dynamic(
+  () => import("@/components/visualEffects/water-wave-wrapper"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
