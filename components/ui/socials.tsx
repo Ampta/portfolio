@@ -27,7 +27,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin className="w-4 h-4" />,
-    link: "no more",
+    link: "https://www.linkedin.com/in/shivam-gupta-123641191",
     username: "Shivam Gupta",
   },
   {

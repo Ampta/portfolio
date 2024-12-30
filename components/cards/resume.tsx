@@ -6,18 +6,27 @@ import Button from "../ui/button";
 import { FaDownload } from "react-icons/fa";
 import Socials from "../ui/socials";
 
+
+
 export default function ResumeCard() {
+
+  function handleResumeDownload() {
+    const googleDriveLink = "https://drive.google.com/uc?id=1xVv8u2bk-XOldwsweMHZpBzMI74Z9kez&export=download";
+    window.location.href = googleDriveLink;
+  }
+
   return (
     <Card className="md:h-full">
+
       <p className="text-lg xl:text-2xl font-medium text-primary-foreground">
-        Online instructor and your web wizard and digital handyman. Armed with 5
-        years of tinkering in the full-stack playground, I&apos;ve got a toolbox
-        that&apos;s overflowing with front-end sparkles and back-end muscle. Add
-        a dash of AI cleverness and a lock-tight dedication to web security, and
-        you&apos;ve got a recipe for online awesomeness. Ready for a little
-        internet enchantment? Let&apos;s make your web dreams a screen reality!
-        🚀🖥
+        Java developer and backend specialist, ready to turn challenges into seamless 
+        solutions. With expertise in crafting secure payment systems, modular APIs, and 
+        scalable web applications, my toolbox includes Spring Boot, Redis, MySQL, and AWS. 
+        Recognized as a STAR Performer, I thrive on precision, innovation, and 
+        problem-solving. Let&apos;s code your vision into reality and build a future 
+        full of possibilities! 🚀✨
       </p>
+
 
       {/* Signature */}
       <div>
@@ -29,10 +38,11 @@ export default function ResumeCard() {
         {/* Socials */}
         <Socials />
 
-        <Button>
-          <FaDownload />
-          Resume
-        </Button>
+      {/* Resume Button */}
+      <Button onClick={handleResumeDownload}>
+        <FaDownload />
+        Resume
+      </Button>
       </div>
     </Card>
   );
