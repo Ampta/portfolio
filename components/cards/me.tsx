@@ -27,7 +27,7 @@ export default function MeCard() {
             className="rounded-tr-2xl rounded-br-2xl rounded-bl-2xl"
           />
           <Tag
-            text="Mern Stack Developer"
+            text="Java Developer"
             className="rounded-tl-2xl rounded-br-2xl rounded-bl-2xl"
           />
           <Tag

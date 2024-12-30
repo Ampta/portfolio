@@ -5,6 +5,7 @@ import { FaPhoneVolume } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function ContactSection() {
+
   return (
     <div className="pt-24 px-3 lg:px-8">
       <Heading number="03" title_1="Contact" title_2="Me" />
@@ -24,6 +25,7 @@ export default function ContactSection() {
               icon={<MdEmail className="fill-[#333] text-lg" />}
               text="ampta77000@gmail.com"
               btnText="Email Us"
+              email="ampta77000@gmail.com"
             />
           </div>
           {/* Contact forms  */}
