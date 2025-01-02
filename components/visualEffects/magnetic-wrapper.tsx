@@ -6,11 +6,13 @@ import { cn } from "@/lib/utils";
 interface MagneticWarapperProps {
   className?: string;
   children: ReactNode;
+  targetSectionId?: string;
 }
 
-const MagnetciWrapper: FC<MagneticWarapperProps> = ({
+const MagneticWrapper: FC<MagneticWarapperProps> = ({
   className,
   children,
+  targetSectionId,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -24,8 +26,19 @@ const MagnetciWrapper: FC<MagneticWarapperProps> = ({
       setPosition({ x: middleX, y: middleY });
     }
   };
+
   const reset = () => {
     setPosition({ x: 0, y: 0 });
+  };
+
+  const handleClick = () => {
+    const section = document.getElementById(targetSectionId); // Get the target section by its ID
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // This ensures the scroll aligns with the top of the section
+      });
+    }
   };
 
   const { x, y } = position;
@@ -37,10 +50,11 @@ const MagnetciWrapper: FC<MagneticWarapperProps> = ({
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
+      onClick={handleClick}
     >
       {children}
     </motion.div>
   );
 };
 
-export default MagnetciWrapper;
+export default MagneticWrapper;

@@ -2,10 +2,19 @@ import Header from "@/components/navigation/header/header";
 import FancyButton from "@/components/ui/fancy-button";
 import LiveClock from "@/components/ui/live-clock";
 import ScrollDown from "@/components/ui/scroll-down";
-import MagnetciWrapper from "@/components/visualEffects/magnetic-wrapper";
+import MagneticWrapper from "@/components/visualEffects/magnetic-wrapper";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function LandingSection() {
+
+  const scrollToSection = (sectionId: string) => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+
   return (
     <div className="relative h-screen overflow-hidden p-8">
 
@@ -13,9 +22,9 @@ export default function LandingSection() {
         <Header />
         {/* Show magnetic fancy button on small screens and hide it on md screen */}
         <div className="absolute left-10 z-10 bottom-24 sm:bottom-36 md:hidden">
-          <MagnetciWrapper>
+          <MagneticWrapper>
             <FancyButton text="Let's talk" icon={<FaArrowRight />} />
-          </MagnetciWrapper>
+          </MagneticWrapper>
         </div>
       </div>
 
@@ -52,11 +61,11 @@ export default function LandingSection() {
       </div> */}
 
       {/*Magentic scroll down*/}
-      <MagnetciWrapper className="absolute left-1/2 -translate-x-1/2 bottom-[8rem] md:bottom-[4rem] 2xl:-bottom-10 ">
-          <ScrollDown />
-        </MagnetciWrapper>
+      <MagneticWrapper targetSectionId="about-section" className="absolute left-1/2 -translate-x-1/2 bottom-[8rem] md:bottom-[4rem] 2xl:-bottom-10 ">
+        <ScrollDown />
+      </MagneticWrapper>
 
-        <div className="absolute right-10 bottom-10">
+      <div className="absolute right-10 bottom-10">
         <LiveClock timezone="india/kolkata" />
       </div>
 
