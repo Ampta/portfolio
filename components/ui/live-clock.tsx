@@ -1,8 +1,7 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
 import moment from "moment-timezone";
-import { DiVim } from "react-icons/di";
+import { FC, useEffect, useState } from "react";
 
 interface LiveClockProps {
   timezone: string;

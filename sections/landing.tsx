@@ -3,8 +3,6 @@ import FancyButton from "@/components/ui/fancy-button";
 import LiveClock from "@/components/ui/live-clock";
 import ScrollDown from "@/components/ui/scroll-down";
 import MagnetciWrapper from "@/components/visualEffects/magnetic-wrapper";
-import MagneticWrapper from "@/components/visualEffects/magnetic-wrapper";
-import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function LandingSection() {
@@ -34,13 +32,13 @@ export default function LandingSection() {
           <div className="relative">
             <span>Brilliance</span>
             <div className="text-[1rem] leading-[1.4rem]  tracking-[-0.07rem] absolute top-[14vw] lg:top-[10vw] 2xl:top-[9rem] left-0 2xl:left-[57rem] w-[30rem] uppercase font-normal">
-              <span>Empowering innovation</span>
+              <span>Igniting Innovation</span>
               <br />
-              <span>through inspired design</span>
+              <span>through Elegant Code</span>
               <br />
-              <span>where challenges spark creativity</span>
+              <span>Where challenges spark creativity</span>
               <br />
-              <span>and solutions redefine possibilities.</span>
+              <span>Ideas into Scalable, Impactful Systems.</span>
             </div>
           </div>
         </div>
